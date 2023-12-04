@@ -5,11 +5,11 @@ import streamlit as st
 st.title('Título')
 
 car_data = pd.read_csv('vehicles.csv') # lendo os dados
-hist_button = st.button('Criar histograma') # criar um botão
-
+hist_button = st.button('Criar gráficos') # criar um botão
+# http://localhost:10000/
 if hist_button: # se o botão for clicado
     # escrever uma mensagem
-    st.write('Criando um histograma para o conjunto de dados de anúncios de vendas de carros')
+    st.write('Criando gráficos para o conjunto de dados de anúncios de vendas de carros')
     
     # criar um histograma
     fig = px.histogram(car_data, x="odometer")
